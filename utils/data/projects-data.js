@@ -10,7 +10,7 @@ export const projectsData = [
         description: " The College Media project streamlines the student experience with a user-friendly interface for login and signup, built using React. Leveraging my expertise in real-time chat applications and modern frameworks, it ensures a seamless user experience with secure authentication. I shared a preview on LinkedIn to invite feedback and collaboration, showcasing my commitment to blending functionality with innovative design.",
         tools: ['ReactJs','NodeJs','MongoDB','Postman','Css','Socket','Rest API','Different libraries'],
         role: 'FullStack Developer',
-        github: 'https://github.com/shreya583/collegemedia',
+        github: 'https://github.com/Shreya8697/college_media',
         code: '',
         demo: '',
         image: ayla,
