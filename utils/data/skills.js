@@ -14,7 +14,7 @@ export const skillsData = [
   'Canva',
   'ViteJS',
   'Figma',
-  // 'Firebase',
+  'Firebase',
   'MaterialUI',
 ]
 
