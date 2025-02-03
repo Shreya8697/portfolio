@@ -54,7 +54,7 @@ export const projectsData = [
         name: "Crypto Trading",
         description: "I developed a **crypto trading platform** featuring real-time market data, user authentication, and portfolio tracking. Built with **React.js**, **Node.js**, and **MongoDB**, this project ensures a seamless and responsive experience. The platform integrates APIs for live cryptocurrency price tracking and supports secure user transactions. TailwindCSS and Bootstrap were used for a sleek, mobile-friendly UI. The application leverages WebSockets for real-time updates, ensuring traders get the latest market trends instantly.",
         tools: ["React.js", "Node.js", "MongoDB", "TailwindCSS", "Bootstrap", "WebSockets", "REST API"],
-        github: "https://github.com/shreya583/ShreyaPortfolio",
+        github: "https://github.com/Shreya8697/",
         code: "",
         demo: "",
         image: realEstate,
