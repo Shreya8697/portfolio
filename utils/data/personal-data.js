@@ -8,7 +8,7 @@ export const personalData = {
     address: 'Nalasopara , Mumbai ,Maharashtra ',
     github: 'https://github.com/Shreya8697',
     facebook: 'https://www.facebook.com/',
-    linkedIn: 'https://www.linkedin.com/in/shreya-gupta8697/',
+    linkedIn: 'https://www.linkedin.com/in/shreya-gupta8697',
     twitter: 'https://twitter.com/Shreyag09068957?s=09',
   //stackOverflow: 'https://stackoverflow.com/',
   //leetcode: "https://leetcode.com/",
