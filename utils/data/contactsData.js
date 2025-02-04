@@ -2,7 +2,7 @@ export const contactsData = {
     email: 'shreyagupta8697@gmail.com',
     phone: '+91 9220908697',
     address: 'Nallasopara , Mumbai ,Maharashtra ',
-    github: 'https://github.com/Shreya8697',
+    github: 'https://github.com/shreya583',
     facebook: 'https://www.facebook.com/',
     linkedIn: 'https://www.linkedin.com/in/shreya-gupta8697/',
     twitter: 'https://twitter.com/Shreyag09068957?s=09',
