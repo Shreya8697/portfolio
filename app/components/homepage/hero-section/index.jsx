@@ -53,13 +53,13 @@ function HeroSection() {
             >
               <FaFacebook size={30} />
             </Link>
-{/*             <Link
+            <Link
               href={personalData.leetcode}
               target='_blank'
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <SiLeetcode size={30} />
-            </Link> */}
+            </Link>
             <Link
               href={personalData.twitter}
               target='_blank'
