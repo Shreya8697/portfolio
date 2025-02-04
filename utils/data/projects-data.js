@@ -29,7 +29,7 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: 'Faktary E solutions(website)',
+        name: 'Faktary E solutions(site)',
         description: "Me and my team of 'Faktary E-Solutions' built an Company Website. Faktary E-Solutions Private Limited emerges as a beacon in the realm of digital transformation, offering a holistic suite of E-Solution services under one roof. Established in 2022, our company is dedicated to redefining business paradigms by harnessing the power of technology and innovation.",
         tools: ['HTML', 'CSS', 'JavaScript','Excel'],
         role: 'FullStack Developer',
@@ -40,7 +40,7 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: 'Nageshwar Shipping (Website)',
+        name: 'Nageshwar Shipping (site)',
         tools: ['HTML', 'CSS', 'JavaScript','Excel'],
         description:"Me and my team of Faktary E Solutions, built an Company Website. Nageshwar takes care of your end-to-end warehousing and distribution logistics, from our strategic network of storage facilities capable to fulfil your customer demands.",
         role: 'FullStack developer',
