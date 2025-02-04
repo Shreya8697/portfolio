@@ -20,8 +20,9 @@ export const projectsData = [
         name: 'Portfolio Website ',
         description: "Here's a description for your interactive and responsive portfolio website Portfolio Website I’ve built an **interactive and responsive portfolio website** using React.js, Node, and TailwindCSS. This site showcases my skills and projects in a dynamic, visually appealing way, with smooth interactions and a mobile-first design. The combination of modern front-end and back-end technologies ensures a fast, seamless user experience, highlighting my expertise in web development and clean, functional design.",
         tools: ['HTML', 'CSS', 'JavaScript','Excel'],
-        view:'https://shreyagupta97.netlify.app',
+        
         github: 'https://github.com/Shreya8697/portfolio',
+        view:'https://shreyagupta97.netlify.app',
         code: '',
         demo: '',
         image: realEstate,
