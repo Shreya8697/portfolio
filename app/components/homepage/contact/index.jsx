@@ -21,8 +21,10 @@ function ContactSection() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {
-          (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY) ? <ContactWithCaptcha />
-            : <ContactWithoutCaptcha />
+          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+  ? <ContactWithCaptcha />
+  : <ContactWithoutCaptcha />
+
         }
 
         <div className="lg:w-3/4 ">
@@ -32,16 +34,18 @@ function ContactSection() {
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>{personalData.email}</span>
+              <a href={`mailto:${personalData.email}`} className="hover:text-[#16f2b3]">
+    {personalData.email}
+  </a>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <IoMdCall
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>
+              <a href={`tel:${personalData.phone}`} className="hover:text-[#16f2b3]">
                 {personalData.phone}
-              </span>
+              </a>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <CiLocationOn
@@ -54,7 +58,8 @@ function ContactSection() {
             </p>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-            <Link target="_blank" href={personalData.github}>
+            <Link target="_blank" rel="noopener noreferrer" href={personalData.github}>
+
               <IoLogoGithub
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={48}

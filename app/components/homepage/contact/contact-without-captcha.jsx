@@ -5,6 +5,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
+
 
 function ContactWithoutCaptcha() {
   const [error, setError] = useState({ email: false, required: false });
@@ -13,6 +15,7 @@ function ContactWithoutCaptcha() {
     email: '',
     message: '',
   });
+const [loading, setLoading] = useState(false);
 
   const checkRequired = () => {
     if (userInput.email && userInput.message && userInput.name) {
@@ -20,37 +23,35 @@ function ContactWithoutCaptcha() {
     }
   };
 
-  const handleSendMail = async (e) => {
-    e.preventDefault();
-    if (!userInput.email || !userInput.message || !userInput.name) {
-      setError({ ...error, required: true });
-      return;
-    } else if (error.email) {
-      return;
-    } else {
-      setError({ ...error, required: false });
-    };
+const handleSendMail = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+  if (!userInput.email || !userInput.message || !userInput.name) {
+    setError({ ...error, required: true });
+    setLoading(false);
+    return;
+  }
 
-    try {
-      const res = await emailjs.send(serviceID, templateID, userInput, options);
-      const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
+  try {
+    const res = await emailjs.send(
+      serviceID,
+      templateID,
+      userInput,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    );
 
-      if (res.status === 200 || teleRes.status === 200) {
-        toast.success('Message sent successfully!');
-        setUserInput({
-          name: '',
-          email: '',
-          message: '',
-        });
-      };
-    } catch (error) {
-      toast.error(error?.text || error);
-    };
-  };
+    if (res.status === 200) {
+      toast.success('Message sent successfully!');
+      setUserInput({ name: '', email: '', message: '' });
+    }
+  } catch (error) {
+    toast.error(error?.text || error);
+  }
+
+  setLoading(false);
+};
+
 
   return (
     <div className="">
@@ -114,6 +115,7 @@ function ContactWithoutCaptcha() {
               </p>
             }
             <button
+            disabled={loading}
               className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
               role="button"
               onClick={handleSendMail}
